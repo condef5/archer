@@ -1,6 +1,9 @@
-# frozen_string_literal: true
-
 require "archer"
+require "pry-byebug"
+
+def load_fixture(filename)
+  File.read(File.join('spec', 'fixtures', filename))
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
